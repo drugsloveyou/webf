@@ -476,6 +476,7 @@ class _WebFRenderObjectElement extends MultiChildRenderObjectElement {
           RenderViewportBox rootRenderObject = renderObject as RenderViewportBox;
           if (!controller!.view.firstLoad) {
             controller!.resume();
+            controller!.view.document.reactiveWidgetElements();
             rootRenderObject.insert(controller!.view.getRootRenderObject()!);
           }
           return;
@@ -543,8 +544,8 @@ class _WebFRenderObjectElement extends MultiChildRenderObjectElement {
 
         controller!.evaluated = true;
       });
-    } catch (e, s) {
-      print(s);
+    } catch (e, stack) {
+      print('$e\n$stack');
     }
   }
 

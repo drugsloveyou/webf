@@ -106,6 +106,9 @@ list(APPEND BRIDGE_SOURCE
   foundation/string_view.cc
   foundation/native_value.cc
   foundation/native_type.cc
+  foundation/stop_watch.cc
+  foundation/profiler.cc
+  foundation/dart_readable.cc
   foundation/ui_command_buffer.cc
   foundation/ui_command_strategy.cc
   polyfill/dist/polyfill.cc
